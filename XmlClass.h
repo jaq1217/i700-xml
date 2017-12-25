@@ -10,11 +10,11 @@ public:
     ~XmlClass();
 
     int read_xmll(QString filename);
-    //void do_xml(const QString opt,QString filename);
+    int write_xmll(QString filename);
 
     typedef struct {
-       QString         Trans;
-       QString         Comment;
+       QString       Trans;
+       QString       Comment;
        uint8_t       Timeout;
        uint8_t       Ccs;
        uint16_t      Index;
@@ -24,7 +24,7 @@ public:
             uint32_t      DataInt;
             uint8_t       DataStr[100];
         };
-        bool        IsChar;
+        bool         IsChar;
        uint8_t       DataLenth;
     }XmlDataStruct;
     XmlDataStruct xmlData[300];//120
